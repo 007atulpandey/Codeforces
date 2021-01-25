@@ -2,7 +2,8 @@
     
     width: 100% !important ;
     justify-content: space-around;
-    background : linear-gradient(90deg, rgba(54,35,60,1) 2%, rgba(242,109,100,1) 38%, rgba(85,47,79,1) 97%);;
+    /* background : linear-gradient(90deg, rgba(54,35,60,1) 2%, rgba(242,109,100,1) 38%, rgba(85,47,79,1) 97%);; */
+    background: linear-gradient(90deg, rgba(113,0,0,0.975210066936931) 26%, rgba(164,104,57,1) 51%, rgba(69,57,57,1) 87%);
     font-family: 'Pacifico', cursive;
 }
 

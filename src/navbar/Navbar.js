@@ -14,8 +14,8 @@ const Navbar =()=>{
   }); 
    
   useEffect( ( ) => {
-    nav_data( localStorage.getItem('handle'));
-    main_data(localStorage.getItem( 'handle'));  
+    nav_data( localStorage.getItem('codeforces'));
+    main_data(localStorage.getItem( 'codeforces'));  
   },[]);
   const history = useHistory (); 
 
@@ -36,16 +36,12 @@ const Navbar =()=>{
        
 
      <li> <Link to ="/dashboard" ><i class="material-icons">beenhere</i> Dashboard </Link>  </li>
-     <li>  <Link to="/addemployee" > <i class="material-icons">add_box</i> Add Employee  </ Link > </li>
-     {/* <li><a href="/addemployee">Add Employee</a></li> */}
-     <li><Link to ="/" > General Management </Link></li>
-     
-     <li><Link to ="/leaves" >  <i class="material-icons">chat_bubble</i>  Leaves </Link></li>
+     <li>  <Link to="/codeforces" > <i class="material-icons">add_box</i> Notification </ Link > </li>
+     {/* <li><Link to ="/leaves" >  <i class="material-icons">chat_bubble</i>  Leaves </Link></li>
      <li><Link to ="/bonus" > <i class="material-icons">attach_money</i>Bonus </Link></li>
      <li><Link to="/candidates"><i class="material-icons">account_circle</i> Candidates</Link></li>
-     <li><Link to="badges.html"> <i class="material-icons">do_not_disturb</i> Generate Report</Link></li>
+     <li><Link to="badges.html"> <i class="material-icons">do_not_disturb</i> Generate Report</Link></li> */}
      <li><button onClick = { ()=>{ localStorage.clear() ; history.push('/signin') ; dispatch({type:"CLEAR"})} }>  Logout</button></li>
-     {/* <li><a href="badges.html">SIGNUP</a></li> */}
      </ div >
     );
   }
@@ -61,7 +57,7 @@ const Navbar =()=>{
     }
      return (
          <div > 
-           <li><Link style={{ "text-decoration" : "none " , "right" :"10px"}}>{ localStorage.getItem('handle')}</Link></li>
+           <li><Link style={{ "text-decoration" : "none " , "right" :"10px"}}>{ localStorage.getItem('codeforces')}</Link></li>
      
            </div > 
      )
@@ -72,18 +68,18 @@ const Navbar =()=>{
           
   <nav className = "navbars">
     <div class="nav-wrapper">
-      <Link to ="/" class="" style={{ "text-decoration" : "none "}}>HR_Management</Link>
+      <Link to ="/" class="" style={{ "text-decoration" : "none "}}> CODEFORCES.com </Link>
       <Link style={{ "text-decoration" : "none "}}  data-target="mobile-demo" class="sidenav-trigger">
       <i className="material-icons">menu</i>
      </ Link>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-      {main_data(localStorage.getItem('handle')) }
+      {main_data(localStorage.getItem('codeforces')) }
       </ul>
     </div>
   </nav>
 
   <ul class="sidenav side-nav" id="mobile-demo">
-    {nav_data(localStorage.getItem('handle')) }
+    {nav_data(localStorage.getItem('codeforces')) }
   </ul>
           
 

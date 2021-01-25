@@ -19,10 +19,8 @@ const Login =()=>{
     	
     const login  = async (e)=> {
        e.preventDefault();
-	   const handle = document.getElementById("handle");
-	   const email = document.getElementById("email");
-	   localStorage.setItem('handle',handle.value);
-	   localStorage.setItem('email',email.value);
+	   const handle = document.getElementById("email");
+	   localStorage.setItem('codeforces',handle.value);
 	   const key = "https://codeforces.com/api/user.info?handles=" +handle.value;
 	   
 	   const allData = await fetch (key); 
@@ -33,58 +31,18 @@ const Login =()=>{
 	   
 	   // setPassword ( data.password);
 	}
-
-
-	function SignUp(){
-		const signUpButton = document.getElementById('signUp');
-  		const signInButton = document.getElementById('signIn');
-  		const container = document.getElementById('container');
-  		container.classList.add("right-panel-active");
-
-	}
-    function SignIn(){
-		const signUpButton = document.getElementById('signUp');
-		const signInButton = document.getElementById('signIn');
-		const container = document.getElementById('container');
-		container.classList.remove("right-panel-active");
-	}
-   
+ 
     
     return (
 
 
 <div  class="container" id="container" >
-	<div class="form-container sign-up-container">
+	<div class="center">
 		<form >
-		<h1>Sign in</h1>
-			<input  name="email" type="email" placeholder="Email" />
-			<input name="password" type="password" placeholder="Password" />
-			<Link to="/">Forgot your password?</Link>
-			<button type="submit" value="login" name="login">Sign In</button>
-		</form>
-	 </div>
-	<div class="form-container sign-in-container">
-		<form >
-			<h1>Sign in</h1>
-			<input id = "email"  name="email" type="email" placeholder="Email" />
-			<input id= "handle" name="password" type="text" placeholder="Handle" />
-			<Link to="/">Forgot your password?</Link>
+			<h1>Handle</h1>
+			<input id = "email"  name="email" type="email" />
 			<button onClick = { login }>Sign Ins</button>
 		</form>
-	</div>
-	<div class="overlay-container">
-		<div class="overlay">
-			<div class="overlay-panel overlay-left">
-				<h1>Welcome !</h1>
-				<p>Login As A Candidate .....</p>
-				<button class="ghost" id="signIn" onClick= { ()=>SignIn() }>Candidates</button>
-			</div>
-			<div class="overlay-panel overlay-right">
-				<h1>Welcome!</h1>
-				<p>Login As HR</p>
-				<button class="ghost" id="signUp" onClick= { ()=>SignUp() }>HR</button>
-			</div>
-		</div>
 	</div>
 </div>
 
