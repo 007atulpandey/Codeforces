@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Speech from 'react-speech';
+import './codeforces.css'
 import Endbar from '../navbar/endbar'
 
 const Codeforces = ()=>{
@@ -70,10 +70,10 @@ const getData = async ()=>{
    } , []) ;
 
     return (
-        <>
+        <div className = "codeforces">
  
         <Endbar /> 
-        </>
+        </div>
     )
 
 }

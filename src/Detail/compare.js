@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Chart } from "react-google-charts";
+import Endbar from '../navbar/endbar';
 const Compare  = ()=>{
     const [ content , setContent] = useState([]);
      var allData = [];
@@ -82,6 +83,7 @@ const Compare  = ()=>{
           </div>  :
          <></>
          }
+         <Endbar/>
          </div>
          
      )

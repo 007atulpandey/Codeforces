@@ -1,0 +1,10 @@
+.codeforces{ 
+    width: 100vw;
+
+    height: 100vh;
+     background: url("../img/heartbeat.gif") ;
+     background-repeat: no-repeat;
+     /* backdrop-filter: inherit; */
+     background-size: contain;
+     background-position: center;
+}
