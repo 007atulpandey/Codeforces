@@ -61,7 +61,7 @@ const Home = ()=>{
                   <th scope="row">{user.id}</th>
                   <td>{ user.name}</td>
                   <td>{ parseInt(-1*user.relativeTimeSeconds/3600) +" hrs "+parseInt(( (-1 *user.relativeTimeSeconds )%3600 )/60 )+" min" }</td>
-                  <td>{ user.durationSeconds/(60*60) +" : "+(user.durationSeconds%(3600))/(60)}</td>
+                  <td>{ parseInt(user.durationSeconds/(60*60)) +" : "+parseInt((user.durationSeconds%(3600)) /(60) ) }</td>
                 </tr>
 
                 </>
