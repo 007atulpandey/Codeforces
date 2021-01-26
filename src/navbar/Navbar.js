@@ -35,9 +35,11 @@ const Navbar =()=>{
        
        
 
+     <li> <Link to ="/" ><i class="material-icons">beenhere</i> Codeforces </Link>  </li>
      <li> <Link to ="/dashboard" ><i class="material-icons">beenhere</i> Dashboard </Link>  </li>
      <li>  <Link to="/codeforces" > <i class="material-icons">add_box</i> Notification </ Link > </li>
      <li><Link to ="/compare" >  <i class="material-icons">chat_bubble</i>  Compare  </Link></li>
+     <li><Link to ="/steps" >  <i class="material-icons">account_circle</i>  How to use?  </Link></li>
    {/*   <li><Link to ="/bonus" > <i class="material-icons">attach_money</i>Bonus </Link></li>
      <li><Link to="/candidates"><i class="material-icons">account_circle</i> Candidates</Link></li>
      <li><Link to="badges.html"> <i class="material-icons">do_not_disturb</i> Generate Report</Link></li> */}
