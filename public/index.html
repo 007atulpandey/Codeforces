@@ -13,10 +13,7 @@
 
     
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    
-    <!-- imported -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   
     
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -42,7 +39,7 @@
 
 
 
-    <title>React App</title>
+    <title>Atul2608</title>
   </head>
   <body>
     
@@ -51,7 +48,13 @@
     
   
     <script>
-      AOS.init();
+      $(document).ready(function(){
+    $('.sidenav')
+        .sidenav()
+        .on('click tap', 'li a', () => {
+            $('.sidenav').sidenav('close');
+        });
+});
     </script>
     
   </body>

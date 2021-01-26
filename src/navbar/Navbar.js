@@ -37,8 +37,8 @@ const Navbar =()=>{
 
      <li> <Link to ="/dashboard" ><i class="material-icons">beenhere</i> Dashboard </Link>  </li>
      <li>  <Link to="/codeforces" > <i class="material-icons">add_box</i> Notification </ Link > </li>
-     {/* <li><Link to ="/leaves" >  <i class="material-icons">chat_bubble</i>  Leaves </Link></li>
-     <li><Link to ="/bonus" > <i class="material-icons">attach_money</i>Bonus </Link></li>
+     <li><Link to ="/compare" >  <i class="material-icons">chat_bubble</i>  Compare  </Link></li>
+   {/*   <li><Link to ="/bonus" > <i class="material-icons">attach_money</i>Bonus </Link></li>
      <li><Link to="/candidates"><i class="material-icons">account_circle</i> Candidates</Link></li>
      <li><Link to="badges.html"> <i class="material-icons">do_not_disturb</i> Generate Report</Link></li> */}
      <li><button onClick = { ()=>{ localStorage.clear() ; history.push('/signin') ; dispatch({type:"CLEAR"})} }>  Logout</button></li>
@@ -72,7 +72,7 @@ const Navbar =()=>{
       <Link style={{ "text-decoration" : "none "}}  data-target="mobile-demo" class="sidenav-trigger">
       <i className="material-icons">menu</i>
      </ Link>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <ul id="nav-mobile" class="right ">
       {main_data(localStorage.getItem('codeforces')) }
       </ul>
     </div>

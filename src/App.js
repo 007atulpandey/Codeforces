@@ -7,6 +7,7 @@ import Dashboard from './Detail/dashboard';
 import { reducer ,initialState } from './reducer/userReducer'
 import Codeforces from './Detail/Codeforces'
 import Home from './navbar/home';
+import Compare from './Detail/compare';
 export const UserContext = createContext();
 export const UserGraph = createContext();
 
@@ -34,6 +35,10 @@ const Routing = ()=>{
       <Route exact path="/signin">
         <Navbar />
         <Login />
+      </Route>
+      <Route exact path="/compare">
+       <Navbar/> 
+        <Compare />
       </Route>
       <Route exact path="/">
         <Navbar />
