@@ -83,7 +83,7 @@ const Compare  = ()=>{
           </div>  :
          <></>
          }
-         <Endbar/>
+         
          </div>
          
      )
