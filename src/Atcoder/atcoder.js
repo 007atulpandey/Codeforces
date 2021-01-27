@@ -16,7 +16,9 @@ const Atcoder  = ()=>{
       <div className="mycard">
           <div className="card auth-card input-field">
             <h2>Atcoder</h2>
+            (atcoder handle)
             <input type = "text"  onChange = {(e ) => setName ( e.target.value ) } />
+            Contest name : (like abc189 , agc50 , arc..)
             <input placeholder= "like ... abc189" type = "text"  onChange = {(e ) => setContest ( e.target.value ) } />
             <button className="btn waves-effect waves-light #64b5f6 blue darken-1"
             onClick={()=>PostData()}
