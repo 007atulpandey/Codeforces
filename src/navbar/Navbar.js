@@ -8,6 +8,7 @@ const Navbar =()=>{
    
   const { state ,dispatch } = useContext ( UserContext) ;
   
+  console.log("atcoder user " + localStorage.getItem("atcoder"))
   document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.sidenav');
     var instances = M.Sidenav.init(elems,'left');
@@ -40,6 +41,12 @@ const Navbar =()=>{
      <li>  <Link to="/codeforces" > <i class="material-icons">add_box</i> Notification </ Link > </li>
      <li><Link to ="/compare" >  <i class="material-icons">chat_bubble</i>  Compare  </Link></li>
      <li><Link to ="/steps" >  <i class="material-icons">account_circle</i>  How to use?  </Link></li>
+     { 
+       localStorage.getItem("atcoder") === null ? 
+       <li><Link to ="/atcoder" >  <i class="material-icons">account_circle</i>  Atcoder  </Link></li>
+        : 
+        <li><Link to ="/notifyatcoder" >  <i class="material-icons">account_circle</i> NotificationAtcoder </Link></li>
+     }
    {/*   <li><Link to ="/bonus" > <i class="material-icons">attach_money</i>Bonus </Link></li>
      <li><Link to="/candidates"><i class="material-icons">account_circle</i> Candidates</Link></li>
      <li><Link to="badges.html"> <i class="material-icons">do_not_disturb</i> Generate Report</Link></li> */}
